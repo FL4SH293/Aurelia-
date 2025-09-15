@@ -14,57 +14,54 @@
     }
 
     body {
-      background: #000;
-      color: red;
-      font-family: 'Cinzel Decorative', serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      position: relative;
-      overflow-x: hidden;
-    }
+  background: #000;
+  color: #FFC0CB;
+  font-family: 'Cinzel Decorative', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
 
-    .container {
-      background: #111;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
+.container {
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
 
-    #auth {
-      margin: 20px 0;
-    }
+input[type="password"] {
+  padding: 10px;
+  margin: 15px 0;
+  width: 80%;
+  max-width: 300px;
+  background: #222;
+  color: #FFC0CB;
+  border: 1px solid #FFC0CB;
+  font-family: inherit;
+}
 
-    input[type="password"] {
-      padding: 10px;
-      margin: 15px 0;
-      width: 80%;
-      max-width: 300px;
-      background: #222;
-      color: red;
-      border: 1px solid red;
-      font-family: inherit;
-    }
+button {
+  padding: 10px 20px;
+  background: #FFC0CB;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: inherit;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
 
-    button {
-      padding: 10px 20px;
-      background: red;
-      color: black;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 10px;
-      font-family: inherit;
-      font-weight: bold;
-      transition: transform 0.2s;
-    }
 
     button:hover {
       transform: scale(1.05);
