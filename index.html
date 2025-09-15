@@ -6,7 +6,7 @@
   <title>Private Letter</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-    
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,8 +14,10 @@
     }
 
     body {
-      background: #000;
-      color: #FFC0CB;
+      background: url('https://www.transparenttextures.com/patterns/crochet.png'), #fdebef;
+      background-repeat: repeat;
+      background-size: auto;
+      color: #F4A7B9;
       font-family: 'Cinzel Decorative', serif;
       display: flex;
       justify-content: center;
@@ -27,12 +29,12 @@
     }
 
     .container {
-      background: #111;
+      background: rgba(255, 255, 255, 0.85);
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(255, 192, 203, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(244, 167, 185, 0.4);
       width: 100%;
-      max-width: 600px;
+      max-width: 650px;
       text-align: center;
       position: relative;
       z-index: 1;
@@ -43,35 +45,41 @@
       margin: 15px 0;
       width: 80%;
       max-width: 300px;
-      background: #222;
-      color: #FFC0CB;
-      border: 1px solid #FFC0CB;
+      background: #fff;
+      color: #F4A7B9;
+      border: 2px solid #F4A7B9;
       font-family: inherit;
+      border-radius: 8px;
+      outline: none;
+      text-align: center;
+      font-size: 1rem;
     }
 
     button {
-      padding: 10px 20px;
-      background: #FFC0CB;
-      color: black;
+      padding: 10px 25px;
+      background: #F4A7B9;
+      color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       margin: 10px;
       font-family: inherit;
       font-weight: bold;
-      transition: transform 0.2s;
+      transition: transform 0.2s, background 0.3s;
     }
 
     button:hover {
       transform: scale(1.05);
+      background: #e38ca3;
     }
 
     #letter {
       display: none;
       text-align: left;
       margin: 20px 0;
-      line-height: 1.6;
+      line-height: 1.7;
       white-space: pre-line;
+      color: #444;
     }
 
     #spiderman {
@@ -96,10 +104,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: #111;
+      background: rgba(255, 255, 255, 0.95);
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(244, 167, 185, 0.4);
       z-index: 100;
       text-align: center;
     }
@@ -108,8 +116,8 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: rgba(0,0,0,0.7);
-      color: red;
+      background: rgba(244, 167, 185, 0.9);
+      color: white;
       width: 50px;
       height: 50px;
       border-radius: 50%;
@@ -119,15 +127,16 @@
       cursor: pointer;
       z-index: 10;
       display: none;
+      font-size: 1.2rem;
     }
 
     .loading {
       display: inline-block;
       width: 20px;
       height: 20px;
-      border: 3px solid rgba(255,0,0,0.3);
+      border: 3px solid rgba(244,167,185,0.3);
       border-radius: 50%;
-      border-top-color: red;
+      border-top-color: #F4A7B9;
       animation: spin 1s ease-in-out infinite;
     }
 
@@ -181,11 +190,10 @@
     const fullText = `Dear Hyacinth,
 
 Even though we're miles apart, you've become one of the most important parts of my life.
-We talk every day, and somehow, it always feels great and real. I mean, why wouldn't it? But yes, you get the point.
+We talk every day, and somehow, it always feels great and real. I mean, wouldn't it? But yeah, you get the point.
 It's koo-koo how someone I don't share a physical space with can feel so present in my life. You've seen me
 small, you've seen me at the mall, as a matter of fact, you've also seen me in the school hall. But 
-one day I will be standing with you with flowers (orchids) in my hand, very tall? idk, i had nothing else to say rn.
-so here is it. stop smiling.
+one day I will be standing with you with flowers (orchids) in my hand, very tall? idk, nothing came to mind.
 
 From your friendly neighborhood,
 Shaun`;
@@ -258,7 +266,8 @@ Shaun`;
         confetti({
           particleCount: 7,
           spread: 60,
-          origin: { y: 0.6 }
+          origin: { y: 0.6 },
+          colors: ['#F4A7B9', '#ffffff']
         });
         if (Date.now() < end) {
           requestAnimationFrame(frame);
